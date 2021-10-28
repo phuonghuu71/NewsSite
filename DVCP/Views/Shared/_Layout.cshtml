@@ -1,0 +1,179 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Tin game mới nhất 2021</title>
+    <link rel="icon" href="~/Content/images/logo-icon.png" type="image/x-icon" />
+    <link href="~/Content/web/styles.css" rel="stylesheet" />
+    <link href="~/Content/web/web.css" rel="stylesheet" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="@ViewBag.Title" />
+    <meta property="og:description" content="@ViewBag.Description" />
+    <meta property="og:image" content="@ViewBag.Image" />
+    <meta name="Description" content="@ViewBag.Description" />
+    <meta name="keywords" content="@ViewBag.Tag">
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css?family=Encode+Sans+Expanded:400,600,700" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="~/Content/AdminLTE/plugins/font-awesome/css/font-awesome.min.css">
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="//fonts.googleapis.com/css?family=Merriweather:400,700%7CDroid+Serif:400,700" rel="stylesheet" type="text/css">
+    @* @Scripts.Render("~/bundles/modernizr")*@
+    @{
+        GetData data = new GetData();
+    }
+</head>
+<body>
+    <header>
+        <div class="bg-191">
+            <div class="container">
+                <div class="oflow-hidden color-white font-10 text-md-center ptb-md-5">
+
+                    <ul class="float-left list-a-plr-10 list-a-plr-sm-5 list-a-ptb-15 list-a-ptb-sm-10 toplink">
+                        @if (Request.IsAuthenticated)
+                        {
+                            <li>@Html.ActionLink("TRANG DÀNH CHO ADMIN", "Index", "Admin", null, new { @class = "nav-link" })</li>
+                            <li>@Html.ActionLink("ĐĂNG XUẤT", "Logout", "User", null, new { @class = "nav-link" })</li>
+                        }
+                    </ul>
+                    <div class="d-inline-block float-right mt-2 mb-2 mr-4">
+                        @*<form action="/tim-kiem" method="get">
+                            <input type="text" name="title" placeholder="Tìm kiếm" class="mr-2 txtSearch" /><button class="text-white" type="submit"><i class="fa fa-search"></i></button>
+                        </form>*@
+
+                        <form action="/tim-kiem" method="get">
+                            <div class="input-group">
+                                <input type="text" name="title" class="form-control rounded" placeholder="Tìm Kiếm" aria-label="Search"
+                                       aria-describedby="search-addon" />
+                                &nbsp;
+                                <button type="submit" class="btn btn-danger"><i class="fa fa-search"></i></button>
+                            </div>
+                        </form>
+                    </div>
+
+                    @*<ul class="float-right float-sm-none list-a-plr-10 list-a-plr-sm-5 list-a-ptb-15 list-a-ptb-sm-5">
+            <li><a class="pl-0 pl-sm-10" href="#"><i class="fa fa-facebook-official"></i></a></li>
+
+            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+        </ul>*@
+                </div>
+            </div>
+            <!-- container -->
+        </div>
+
+        <div class="container back-white d-flex justify-content-between align-items-center">
+            @*<a class="menu-nav-icon" data-menu="#main-menu" href="#"><i class="ion-navicon"></i></a>*@
+            <a ref="/" class="d-flex align-items-center">
+                <img src="~/Content/web/images/logo-black.png" alt="Logo" class="logo m-0">
+                &nbsp;
+                <h2 class="text-danger mb-0">GAMENEWS</h2>
+            </a>
+            <ul class="main-menu2 link" id="main-menu">
+                <li class="align-self-top"><a href="/">TRANG CHỦ</a></li>
+                @*<li class="drop-down">
+                <a href="/trieu-dai">TRIỀU ĐẠI<i class="fa fa-caret-down"></i></a>
+                <ul class="drop-down-menu drop-down-inner">
+                    @foreach (var i in data.GetEnumShowList().Take(6))
+                    {
+                        <li><a href="/trieu-dai/@i.slug-@i.value">@i.showname</a></li>
+                    }
+                    <li><a href="/trieu-dai/">XEM TẤT CẢ</a></li>
+                </ul>
+            </li>*@
+                <li class="drop-down">
+                    <a href="/danh-muc/">DANH MỤC<i class="fa fa-caret-down"></i></a>
+                    <ul class="drop-down-menu drop-down-inner">
+                        @foreach (var i in data.GetListTags().Take(6))
+                        {
+                            <li><a href="/danh-muc/@SlugGenerator.SlugGenerator.GenerateSlug(i.TagName.ToLower())-@i.TagID">@i.TagName</a></li>
+                        }
+                        <li><a href="/danh-muc/">XEM TẤT CẢ</a></li>
+                    </ul>
+                </li>
+                @*<li><a href="/danh-muc/du-an-project-12">PROJECT</a></li>*@
+                <li><a href="/tim-kiem">TÌM NÂNG CAO</a></li>
+            </ul>
+        </div><!-- container -->
+    </header>
+    <div class="container body-content">
+        @RenderBody()
+    </div>
+    <footer class="bg-191 color-ccc">
+
+        <div class="container">
+            <div class="pt-50 pb-20 pos-relative">
+                <div class="abs-tblr pt-50 z--1 text-center">
+                    @*<div class="h-80 pos-relative"><img class="opacty-1 h-100 w-auto" src="~/Content/web/images/map.png" alt=""></div>*@
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="mb-30">
+                            <h5 class="text-danger mb-20"><b>BAN BIÊN TẬP NEWGAMES</b></h5>
+                            <p class="mtb-20 color-ccc">
+                                8a Tống Hữu Định, Thảo Điền, Quận 2, Thành phố Hồ Chí Minh
+                            </p>
+                            <p class="mtb-20 color-ccc">
+                                Điện thoại: (+84)981119573
+                            </p>
+                            <p class="mtb-20 color-ccc">Email: phamnguyenhuuphuong2000@gmail.com</p>
+                        </div><!-- mb-30 -->
+                    </div><!-- col-md-4 -->
+
+
+                    <div class="col-sm-4">
+                        <div class="mb-30">
+                            <h5 class="text-danger mb-20"><b>ĐỀ XUẤT CAO</b></h5>
+                            @{ var cnt = 2;}
+                            @foreach (var i in data.GetHighRatedPost())
+                            {
+
+                                <div class="mb-20">
+                                    <a class="color-white" href="/bai-viet/@i.slug"><b>@i.post_title</b></a>
+                                    <h6 class="mt-10">@String.Format("{0:dd/MM/yyyy}", i.create_date)</h6>
+                                </div>
+                                if (cnt % 2 == 0)
+                                {
+                                    <div class="brdr-ash-1 opacty-2 mr-30 mb-2 mt-2"></div>
+                                }
+                                cnt++;
+                            }
+
+
+
+                        </div><!-- mb-30 -->
+                    </div><!-- col-md-4 -->
+
+                    <div class="col-sm-4">
+                        <div class="mb-30">
+                            <h5 class="text-danger mb-20"><b>LIÊN HỆ QUẢNG CÁO</b></h5>
+                            <p class="mtb-20 color-ccc">
+                                Hotline: (+84)981119573
+                            </p>
+                            <p class="mtb-20 color-ccc">Email: phamnguyenhuuphuong2000@gmail.com</p>
+                        </div><!-- mb-30 -->
+                    </div><!-- col-md-4 -->
+
+
+                </div><!-- row -->
+            </div><!-- ptb-50 -->
+
+            <div class="brdr-ash-1 opacty-2"></div>
+
+            <div class="oflow-hidden color-ash font-9 text-sm-center ptb-sm-5">
+
+               
+
+            </div>
+        </div>
+    </footer>
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v3.3"></script>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    <script src="~/Content/web/tether.min.js"></script>
+    <script src="~/Content/web/scripts.js"></script>
+    <script src="~/Content/photoswipe/init.js"></script>
+    @RenderSection("scripts", required: false)
+</body>
+</html>
