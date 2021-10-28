@@ -1,4 +1,4 @@
-## Gamenews - Trang Tin Tức Game
+## GameNews - Trang Tin Tức Game
 Một trang web tin tức MVC 5.  
 Code first, javascript AJAX, bootstrap 4, thư viện quản lý file ELFinder.  
 Authentication: Forms Authentication (cookie)  
