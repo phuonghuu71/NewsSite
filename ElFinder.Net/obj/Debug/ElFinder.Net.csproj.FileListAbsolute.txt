@@ -21,3 +21,30 @@ F:\Hoctap\ASP\Clone Project\DVCP\ElFinder.Net\obj\Debug\ElFinder.Net.csproj.Core
 F:\Hoctap\ASP\Clone Project\DVCP\ElFinder.Net\obj\Debug\ElFinder.Net.csproj.CopyComplete
 F:\Hoctap\ASP\Clone Project\DVCP\ElFinder.Net\obj\Debug\ElFinder.Net.dll
 F:\Hoctap\ASP\Clone Project\DVCP\ElFinder.Net\obj\Debug\ElFinder.Net.pdb
+D:\College\Web\Final\NewsSite\ElFinder.Net\bin\Debug\ElFinder.Net.XML
+D:\College\Web\Final\NewsSite\ElFinder.Net\bin\Debug\ElFinder.Net.dll
+D:\College\Web\Final\NewsSite\ElFinder.Net\bin\Debug\ElFinder.Net.pdb
+D:\College\Web\Final\NewsSite\ElFinder.Net\bin\Debug\Newtonsoft.Json.dll
+D:\College\Web\Final\NewsSite\ElFinder.Net\bin\Debug\System.Web.Helpers.dll
+D:\College\Web\Final\NewsSite\ElFinder.Net\bin\Debug\System.Web.Mvc.dll
+D:\College\Web\Final\NewsSite\ElFinder.Net\bin\Debug\System.Web.Razor.dll
+D:\College\Web\Final\NewsSite\ElFinder.Net\bin\Debug\System.Web.WebPages.Deployment.dll
+D:\College\Web\Final\NewsSite\ElFinder.Net\bin\Debug\System.Web.WebPages.dll
+D:\College\Web\Final\NewsSite\ElFinder.Net\bin\Debug\System.Web.WebPages.Razor.dll
+D:\College\Web\Final\NewsSite\ElFinder.Net\bin\Debug\Newtonsoft.Json.pdb
+D:\College\Web\Final\NewsSite\ElFinder.Net\bin\Debug\Newtonsoft.Json.xml
+D:\College\Web\Final\NewsSite\ElFinder.Net\bin\Debug\System.Web.Helpers.xml
+D:\College\Web\Final\NewsSite\ElFinder.Net\bin\Debug\System.Web.Mvc.xml
+D:\College\Web\Final\NewsSite\ElFinder.Net\bin\Debug\System.Web.Razor.xml
+D:\College\Web\Final\NewsSite\ElFinder.Net\bin\Debug\System.Web.WebPages.xml
+D:\College\Web\Final\NewsSite\ElFinder.Net\bin\Debug\System.Web.WebPages.Deployment.xml
+D:\College\Web\Final\NewsSite\ElFinder.Net\bin\Debug\System.Web.WebPages.Razor.xml
+D:\College\Web\Final\NewsSite\ElFinder.Net\obj\Debug\ElFinder.Net.csproj.CoreCompileInputs.cache
+D:\College\Web\Final\NewsSite\ElFinder.Net\obj\Debug\ElFinder.Net.csproj.CopyComplete
+D:\College\Web\Final\NewsSite\ElFinder.Net\obj\Debug\ElFinder.Net.dll
+D:\College\Web\Final\NewsSite\ElFinder.Net\obj\Debug\ElFinder.Net.pdb
+D:\College\Web\Final\NewsSite\ElFinder.Net\bin\Debug\ElFinder.Net.dll.config
+D:\College\Web\Final\NewsSite\ElFinder.Net\bin\Debug\EntityFramework.dll
+D:\College\Web\Final\NewsSite\ElFinder.Net\bin\Debug\EntityFramework.SqlServer.dll
+D:\College\Web\Final\NewsSite\ElFinder.Net\bin\Debug\EntityFramework.xml
+D:\College\Web\Final\NewsSite\ElFinder.Net\bin\Debug\EntityFramework.SqlServer.xml
