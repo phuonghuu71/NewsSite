@@ -1,6 +1,6 @@
-﻿@model IEnumerable<NewsProject.Models.tbl_User>
+﻿@model IEnumerable<NewsProject.Models.User>
 @{
-    ViewBag.Title = "Quản lý user";
+    ViewBag.Title = "Quản lý người dùng";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 <div style="margin-top:20px;">
@@ -33,7 +33,16 @@
                                 </a>
                             </li>
                         </ul>
-                        <a href="/Admin/UserPost?id=@item.userid" class="btn btn-primary btn-block"><b>Các bài đã đăng</b></a>
+                        @if (@item.Tbl_POST.Count > 0)
+                        {
+                            <a href="/Admin/UserPost?id=@item.userid" class="btn btn-primary btn-block"><b>Các bài đã đăng</b></a>
+                        }
+                        else
+                        {
+                            <a href="/Admin/UserPost?id=@item.userid" class="btn btn-primary btn-block disabled" disable>
+                                <b>Các bài đã đăng</b>
+                            </a>
+                        }
                     </div>
                     <!-- /.card-body -->
                 </div>

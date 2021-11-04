@@ -38,6 +38,8 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <Prefer32Bit>false</Prefer32Bit>
+    <ExcludeGeneratedDebugSymbol>true</ExcludeGeneratedDebugSymbol>
+    <LegacyPublishPropertiesPageEnabled>true</LegacyPublishPropertiesPageEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -2258,6 +2260,8 @@
     <Content Include="Upload\Files\Images\techwiz NA.png" />
     <Content Include="Upload\images\not ignore.txt" />
     <Content Include="Upload\nothing.txt" />
+    <Content Include="Views\Home\ViewPost.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -2268,7 +2272,6 @@
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
-    <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Scripts\umd\popper.min.js.map" />
     <Content Include="Scripts\umd\popper.js.map" />
@@ -2300,7 +2303,6 @@
     <Content Include="Views\Admin\SerieDetail.cshtml" />
     <Content Include="Views\Home\_HotPost.cshtml" />
     <Content Include="Views\Home\_PopularPost.cshtml" />
-    <Content Include="Views\Home\ViewPost.cshtml" />
     <Content Include="Views\Home\_RelatedPost.cshtml" />
     <Content Include="Views\Admin\ListTags.cshtml" />
     <Content Include="Views\Admin\HotPostManager.cshtml" />

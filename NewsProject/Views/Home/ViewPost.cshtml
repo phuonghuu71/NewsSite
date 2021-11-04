@@ -6,7 +6,6 @@
     ViewBag.Tag = Model.post_tag;
     GetData data = new GetData();
     var slug = SlugGenerator.SlugGenerator.GenerateSlug(Model.post_title) + "-" + Model.post_id;
-
 }
 <div class="mb-2 brdr-ash-1 opacty-5"></div>
 
@@ -25,12 +24,13 @@
                 </section>
                 <h1 id="title_post">@Model.post_title</h1>
                 <div id="author_time">
-                <i class="fa fa-clock-o mr-1"></i>
-                @String.Format("{0:dd/MM/yyyy}", Model.create_date)  - 
-                <i class="fa fa-eye mr-1"></i> @Model.ViewCount views
-                   
+                    <i class="fa fa-clock-o mr-1"></i>
+                    @String.Format("{0:dd/MM/yyyy}", Model.create_date)  -
+                    <i class="fa fa-eye mr-1"></i> @Model.ViewCount views
+
                 </div>
                 <hr />
+
                 <div class="content">
                     <div id="teaser-post">
                         @Model.post_teaser
@@ -48,7 +48,7 @@
                     </div>
                 </div>
                 <hr />
-                
+
                 <div class="float-left-right text-center mt-40 mt-sm-20">
                     <ul class="mb-30 list-li-mt-10 list-li-mr-5 list-a-plr-15 list-a-ptb-7 list-a-bg-grey list-a-br-2 list-a-hvr-primary ">
                         @foreach (var i in Model.tagLists)
@@ -64,6 +64,8 @@
                     </ul>
 
                 </div>
+
+                <div class="fb-comments" data-href="http://fb.com/@TempData["GetUrl"]" data-width="700" data-numposts="5"></div>
                 @Html.Partial("_RelatedPost", data.GetRelatedPost(Model.tagLists.FirstOrDefault().id))
             </div>
             <div class="col-md-4">
@@ -71,6 +73,7 @@
             </div>
         </div>
     </section>
+
 </div>
 <!-- Root element of PhotoSwipe. Must have class pswp. -->
 <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
@@ -83,8 +86,8 @@
     <div class="pswp__scroll-wrap">
 
         <!-- Container that holds slides.
-            PhotoSwipe keeps only 3 of them in the DOM to save memory.
-            Don't modify these 3 pswp__item elements, data is added later on. -->
+        PhotoSwipe keeps only 3 of them in the DOM to save memory.
+        Don't modify these 3 pswp__item elements, data is added later on. -->
         <div class="pswp__container">
             <div class="pswp__item"></div>
             <div class="pswp__item"></div>
@@ -132,7 +135,6 @@
             </div>
 
         </div>
-
     </div>
 
 </div>

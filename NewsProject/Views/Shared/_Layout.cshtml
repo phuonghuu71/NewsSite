@@ -2,6 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8" />
+    <meta property="fb:app_id" content="894702728136756" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - Tin game mới nhất 2021</title>
     <link rel="icon" href="~/Content/images/logo-icon.png" type="image/x-icon" />
@@ -39,8 +40,8 @@
                     </ul>
                     <div class="d-inline-block float-right mt-2 mb-2 mr-4">
                         @*<form action="/tim-kiem" method="get">
-                            <input type="text" name="title" placeholder="Tìm kiếm" class="mr-2 txtSearch" /><button class="text-white" type="submit"><i class="fa fa-search"></i></button>
-                        </form>*@
+                                <input type="text" name="title" placeholder="Tìm kiếm" class="mr-2 txtSearch" /><button class="text-white" type="submit"><i class="fa fa-search"></i></button>
+                            </form>*@
 
                         <form action="/tim-kiem" method="get">
                             <div class="input-group">
@@ -53,10 +54,10 @@
                     </div>
 
                     @*<ul class="float-right float-sm-none list-a-plr-10 list-a-plr-sm-5 list-a-ptb-15 list-a-ptb-sm-5">
-            <li><a class="pl-0 pl-sm-10" href="#"><i class="fa fa-facebook-official"></i></a></li>
+                            <li><a class="pl-0 pl-sm-10" href="#"><i class="fa fa-facebook-official"></i></a></li>
 
-            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-        </ul>*@
+                            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                        </ul>*@
                 </div>
             </div>
             <!-- container -->
@@ -72,15 +73,15 @@
             <ul class="main-menu2 link" id="main-menu">
                 <li class="align-self-top"><a href="/">TRANG CHỦ</a></li>
                 @*<li class="drop-down">
-                <a href="/trieu-dai">TRIỀU ĐẠI<i class="fa fa-caret-down"></i></a>
-                <ul class="drop-down-menu drop-down-inner">
-                    @foreach (var i in data.GetEnumShowList().Take(6))
-                    {
-                        <li><a href="/trieu-dai/@i.slug-@i.value">@i.showname</a></li>
-                    }
-                    <li><a href="/trieu-dai/">XEM TẤT CẢ</a></li>
-                </ul>
-            </li>*@
+                        <a href="/trieu-dai">TRIỀU ĐẠI<i class="fa fa-caret-down"></i></a>
+                        <ul class="drop-down-menu drop-down-inner">
+                            @foreach (var i in data.GetEnumShowList().Take(6))
+                            {
+                                <li><a href="/trieu-dai/@i.slug-@i.value">@i.showname</a></li>
+                            }
+                            <li><a href="/trieu-dai/">XEM TẤT CẢ</a></li>
+                        </ul>
+                    </li>*@
                 <li class="drop-down">
                     <a href="/danh-muc/">DANH MỤC<i class="fa fa-caret-down"></i></a>
                     <ul class="drop-down-menu drop-down-inner">
@@ -109,7 +110,7 @@
                 <div class="row">
                     <div class="col-sm-4">
                         <div class="mb-30">
-                            <h5 class="text-danger mb-20"><b>BAN BIÊN TẬP NEWGAMES</b></h5>
+                            <h5 class="text-danger mb-20"><b>BAN BIÊN TẬP GAMENEWS</b></h5>
                             <p class="mtb-20 color-ccc">
                                 8a Tống Hữu Định, Thảo Điền, Quận 2, Thành phố Hồ Chí Minh
                             </p>
@@ -162,13 +163,13 @@
 
             <div class="oflow-hidden color-ash font-9 text-sm-center ptb-sm-5">
 
-               
+
 
             </div>
         </div>
     </footer>
     <div id="fb-root"></div>
-    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v3.3"></script>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v12.0&appId=894702728136756&autoLogAppEvents=1" nonce="2V4Cq9pE"></script>
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     <script src="~/Content/web/tether.min.js"></script>
