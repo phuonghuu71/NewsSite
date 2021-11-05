@@ -597,10 +597,11 @@ namespace NewsProject.Controllers
                 if (isSavedSuccessfully)
                 {
                     Post pOST = db.postRepository.FindByID(model.post_id);
-                    if (pOST.tbl_User.username != User.Identity.Name)
-                    {
-                        return RedirectToAction("ListPost");
-                    }
+                    //if (pOST.tbl_User.username != User.Identity.Name)
+                    //if(User.IsInRole("admin"))
+                    //{
+                    //    return RedirectToAction("ListPost");
+                    //}
                     pOST.dynasty = model.dynasty.ToString();
                     pOST.edit_date = DateTime.Now;
                     pOST.AvatarImage = model.AvatarImage;

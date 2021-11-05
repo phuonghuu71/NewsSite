@@ -5,7 +5,7 @@
     ViewBag.Image = "~/Upload/images/" + Model.AvatarImage;
     ViewBag.Tag = Model.post_tag;
     GetData data = new GetData();
-    var slug = SlugGenerator.SlugGenerator.GenerateSlug(Model.post_title) + "-" + Model.post_id;
+    var slug = SlugGenerator.SlugGenerator.GenerateSlug(Model.post_title);
 }
 <div class="mb-2 brdr-ash-1 opacty-5"></div>
 
