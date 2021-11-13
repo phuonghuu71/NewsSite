@@ -41,9 +41,8 @@ namespace NewsProject.Controllers
         {
             if(!String.IsNullOrWhiteSpace(title))
             {
-                String getUrl = Request.Url.ToString();
-
-                TempData["GetUrl"] = getUrl.Substring(22);
+                String getUrl = System.Web.HttpContext.Current.Request.Url.PathAndQuery;
+                TempData["GetUrl"] = getUrl;
                 Post p = db.postRepository.FindBySlug(title);
                 if (p != null)
                 {

@@ -9,7 +9,7 @@
 }
 <div class="mb-2 brdr-ash-1 opacty-5"></div>
 
-<div class="col-12  pl-md-0 pr-md-0">
+<div class="col-12 pl-md-0 pr-md-0">
     <section class="pt-md-4">
         <div class="row">
             <!-- Nội dung chính-->
@@ -65,7 +65,7 @@
 
                 </div>
 
-                <div class="fb-comments" data-href="http://fb.com/@TempData["GetUrl"]" data-width="700" data-numposts="5"></div>
+                <div class="fb-comments" data-href="http://gamenews.com/@TempData["GetUrl"]" data-width="100%" data-numposts="5"></div>
                 @Html.Partial("_RelatedPost", data.GetRelatedPost(Model.tagLists.FirstOrDefault().id))
             </div>
             <div class="col-md-4">
@@ -155,3 +155,6 @@
 <script src="~/Content/photoswipe/dist/photoswipe-ui-default.min.js"></script>
 @*<script src="~/Content/photoswipe/init.js"></script>*@
 <script src="~/Content/js/share.js"></script>
+<!-- Facebook comment plugin -->
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v12.0&appId=894702728136756&autoLogAppEvents=1" nonce="EifvrHFY"></script>

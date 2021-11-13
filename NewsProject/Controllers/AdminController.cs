@@ -18,6 +18,27 @@ namespace NewsProject.Controllers
         //[Authorize(Roles ="admin,editor")]
         public ActionResult Index()
         {
+            var list = db.postRepository.AllPosts().
+                Where(i => i.create_date.HasValue).
+                GroupBy(
+                    i => i.create_date.Value.Month
+                ).
+                Select(x => new
+                {
+                    Month = x.Key,
+                    Total = x.Sum(i => i.ViewCount)
+                }).
+                Distinct();
+            List<int> views = new List<int>();
+            List<String> months = new List<String>();
+            foreach (var item in list)
+            {
+                views.Add(item.Total);
+                months.Add("Tháng "+ item.Month);
+            }
+            var getViews = views;
+            ViewBag.LIST = months;
+            ViewBag.VIEWS = getViews.ToList();
             return View();
         }
         public ActionResult newPost()

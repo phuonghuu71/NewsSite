@@ -3,4 +3,59 @@
     ViewBag.Title = "Trang Admin";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
-<p>Homepage GameNews</p>
+<div class="my-4">
+    <div class="card">
+        <div class="card-header">
+            Bảng thống kê lượt xem theo tháng (Tính từ ngày đăng)
+        </div>
+        <div class="card-body">
+            <div class="w-75 mx-auto">
+                <canvas id="bar_chart">
+                </canvas>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    var viewsArray = @Html.Raw(Json.Encode(ViewBag.VIEWS));
+    var list = @Html.Raw(Json.Encode(ViewBag.LIST));
+
+    var ctx = $("#bar_chart");
+    var barChart = new Chart(ctx, {
+        type: 'pie',
+        data: {
+            labels: list,
+            datasets: [{
+                label: "Thống kê lượt xem theo tháng",
+                data: viewsArray,
+                backgroundColor: [
+                    'rgb(255, 99, 132)',
+                    'rgb(54, 162, 235)',
+                    'rgb(255, 205, 86)',
+                    'rgb(15, 94, 0)',
+                    'rgb(54, 162, 235)',
+                    'rgb(255, 205, 86)',
+                    'rgb(255, 99, 132)',
+                    'rgb(54, 162, 235)',
+                    'rgb(255, 205, 86)',
+                    'rgb(255, 99, 132)',
+                    'rgb(54, 162, 235)',
+                    'rgb(255, 205, 86)'
+                ],
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    position: 'top',
+                },
+                title: {
+                    display: true,
+                    text: 'Bảng thống kê lượt xem theo tháng'
+                }
+            }
+        },
+    });
+</script>

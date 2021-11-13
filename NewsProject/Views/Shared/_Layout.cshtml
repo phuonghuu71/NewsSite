@@ -72,16 +72,6 @@
             </a>
             <ul class="main-menu2 link" id="main-menu">
                 <li class="align-self-top"><a href="/">TRANG CHỦ</a></li>
-                @*<li class="drop-down">
-                        <a href="/trieu-dai">TRIỀU ĐẠI<i class="fa fa-caret-down"></i></a>
-                        <ul class="drop-down-menu drop-down-inner">
-                            @foreach (var i in data.GetEnumShowList().Take(6))
-                            {
-                                <li><a href="/trieu-dai/@i.slug-@i.value">@i.showname</a></li>
-                            }
-                            <li><a href="/trieu-dai/">XEM TẤT CẢ</a></li>
-                        </ul>
-                    </li>*@
                 <li class="drop-down">
                     <a href="/danh-muc/">DANH MỤC<i class="fa fa-caret-down"></i></a>
                     <ul class="drop-down-menu drop-down-inner">
@@ -168,8 +158,6 @@
             </div>
         </div>
     </footer>
-    <div id="fb-root"></div>
-    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v12.0&appId=894702728136756&autoLogAppEvents=1" nonce="2V4Cq9pE"></script>
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     <script src="~/Content/web/tether.min.js"></script>

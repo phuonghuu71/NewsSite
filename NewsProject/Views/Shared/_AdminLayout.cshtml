@@ -42,6 +42,7 @@
         [data-notify="container"][class*="alert-pastel-"] > [data-notify="message"] {
             font-weight: 400;
         }
+
     </style>
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title - GameNews</title>
@@ -77,6 +78,7 @@
     @Scripts.Render("~/bundles/bootstrap")
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/jqueryui")
+    <script src="~/Scripts/Chart.min.js"></script>
 
 </head>
 <body class="hold-transition sidebar-mini">
@@ -108,7 +110,7 @@
                  
         </nav>
         <!-- Main Sidebar Container -->
-        <aside class="main-sidebar sidebar-dark-primary elevation-4">
+        <aside class="main-sidebar sidebar-dark-primary elevation-4 overflow-hidden">
             <!-- Brand Logo -->
             <a href="/" class="brand-link">
                 <img src="~/Content/images/logo-icon.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
@@ -171,17 +173,22 @@
                                     </a>
                                 </li>
                                 @*<li class="nav-item">
-                                    <a href="/Admin/ListSeries" class="nav-link">
-                                        <i class="fa fa-circle-o nav-icon text-info"></i>
-                                        <p>Quản lý Series</p>
-                                    </a>
-                                </li>*@
-                                <li class="nav-item">
-                                    <a href="/Admin/ListTags" class="nav-link">
-                                        <i class="fa fa-circle-o nav-icon text-primary"></i>
-                                        <p>Quản lý Tag</p>
-                                    </a>
-                                </li>
+            <a href="/Admin/ListSeries" class="nav-link">
+                <i class="fa fa-circle-o nav-icon text-info"></i>
+                <p>Quản lý Series</p>
+            </a>
+        </li>*@
+
+                                @if (User.IsInRole("admin"))
+                                {
+
+                                    <li class="nav-item">
+                                        <a href="/Admin/ListTags" class="nav-link">
+                                            <i class="fa fa-circle-o nav-icon text-primary"></i>
+                                            <p>Quản lý Tag</p>
+                                        </a>
+                                    </li>
+                                }
                             </ul>
                         </li>
                         <li class="nav-item has-treeview">
@@ -221,12 +228,12 @@
                             </ul>
                         </li>
                         <li class="nav-header" style="font-size:1.1rem">Công cụ</li>
-                        <li class="nav-item">
+                        @*<li class="nav-item">
                             <a href="/Admin/FileManager" target="_blank" class="nav-link">
                                 <i class="nav-icon fa fa-circle-o text-info"></i>
                                 <p>Quản Lý File</p>
                             </a>
-                        </li>
+                        </li>*@
                         @if (User.IsInRole("admin"))
                         {
                             <li class="nav-item">

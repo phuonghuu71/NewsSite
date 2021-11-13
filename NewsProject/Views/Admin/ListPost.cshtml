@@ -16,12 +16,14 @@
             <div style="padding: 0.75rem 1.25rem;">
                 <div class="row">
                     <div class="col-sm-12 col-md-5">
+                           
                         <div>
                             <label style="display:inline-block;font-weight:normal">Sắp xếp theo <b>@ViewBag.sortname</b> @ViewBag.Sort</label>
                         </div>
                         @Html.ActionLink("Tiêu đề", "ListPost", new { sortOrder = "Title", CurrentSort = ViewBag.CurrentSort,titleStr = ViewBag.titleStr }) |
                         @Html.ActionLink("Ngày đăng", "ListPost", new { sortOrder = "CreateDate", CurrentSort = ViewBag.CurrentSort, titleStr = ViewBag.titleStr }) |
                         @Html.ActionLink("Lượt xem", "ListPost", new { sortOrder = "ViewCount", CurrentSort = ViewBag.CurrentSort, titleStr = ViewBag.titleStr }) |
+                        
                     </div>
                     <div class="col-sm-12 col-md-4">
                         @using (Html.BeginForm("ListPost", "Admin", FormMethod.Get, new { enctype = "multipart/form-data" }))
