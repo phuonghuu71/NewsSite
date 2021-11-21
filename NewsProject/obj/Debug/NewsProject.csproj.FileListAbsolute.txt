@@ -13,7 +13,6 @@ D:\College\Web\Final\NewsSite\NewsProject\bin\EntityFramework.SqlServer.dll
 D:\College\Web\Final\NewsSite\NewsProject\bin\Microsoft.AspNet.TelemetryCorrelation.dll
 D:\College\Web\Final\NewsSite\NewsProject\bin\Microsoft.Owin.dll
 D:\College\Web\Final\NewsSite\NewsProject\bin\Microsoft.Web.Infrastructure.dll
-D:\College\Web\Final\NewsSite\NewsProject\bin\Microsoft.WindowsAzure.Storage.dll
 D:\College\Web\Final\NewsSite\NewsProject\bin\Newtonsoft.Json.dll
 D:\College\Web\Final\NewsSite\NewsProject\bin\PagedList.dll
 D:\College\Web\Final\NewsSite\NewsProject\bin\PagedList.Mvc.dll
