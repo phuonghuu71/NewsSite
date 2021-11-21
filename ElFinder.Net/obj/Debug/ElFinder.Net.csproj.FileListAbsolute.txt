@@ -76,3 +76,4 @@ F:\Hoctap\ASP\Clone Project\NewsProject\ElFinder.Net\obj\Debug\ElFinder.Net.cspr
 F:\Hoctap\ASP\Clone Project\NewsProject\ElFinder.Net\obj\Debug\ElFinder.Net.csproj.CopyComplete
 F:\Hoctap\ASP\Clone Project\NewsProject\ElFinder.Net\obj\Debug\ElFinder.Net.dll
 F:\Hoctap\ASP\Clone Project\NewsProject\ElFinder.Net\obj\Debug\ElFinder.Net.pdb
+D:\College\Web\Final\NewsSite\ElFinder.Net\obj\Debug\ElFinder.Net.csproj.AssemblyReference.cache
